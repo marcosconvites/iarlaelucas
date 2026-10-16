@@ -1,204 +1,79 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Convite de casamento de Ana & Lucas" />
-  <title>Ana & Lucas | Nosso Casamento</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css" />
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#263329"><title>I & L — Nosso casamento</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="estilo.css">
 </head>
 <body>
+<section class="abertura abertura-foto-tela" id="abertura" aria-label="Envelope fechado do convite de casamento">
+  <img class="imagem-envelope-tela" src="imagens/abertura-realista.png" alt="Envelope verde com cordas cruzadas e lacre dourado I e L">
+  <div class="sombra-envelope-tela" aria-hidden="true"></div>
+  <button id="abrir" class="zona-lacre-tela" type="button" aria-label="Clique no lacre dourado para abrir o convite"></button>
+  <button class="zona-etiqueta-tela" id="etiquetaSelo" type="button" aria-label="Clique no selo para abrir o convite"></button>
+  <span class="aviso-toque-tela" aria-hidden="true">TOQUE NO LACRE PARA ABRIR</span>
+</section>
 
-  <!-- =========================================================
-       CAPA DO CONVITE
-       Clique em "Abrir convite" para iniciar a animação.
-  ========================================================== -->
-  <div class="invitation-cover" id="invitationCover" aria-label="Capa do convite">
-    <div class="cover-glow"></div>
-    <div class="cover-texture"></div>
-
-    <div class="cover-content">
-      <p class="cover-small">Com carinho, convidamos você</p>
-
-      <div class="cover-monogram">
-        <span>A</span>
-        <i>&</i>
-        <span>L</span>
-      </div>
-
-      <p class="cover-names">Ana & Lucas</p>
-      <p class="cover-date">13 • 02 • 2027</p>
-
-      <button class="open-invitation" id="openInvitation" type="button">
-        <span>Desatar os laços</span>
-        <b>♡</b>
-      </button>
-    </div>
-
-    <!-- Laços / fitas -->
-    <div class="ribbon ribbon-left" aria-hidden="true">
-      <div class="ribbon-knot"></div>
-      <div class="ribbon-tail ribbon-tail-left"></div>
-      <div class="ribbon-tail ribbon-tail-right"></div>
-    </div>
-
-    <div class="ribbon ribbon-right" aria-hidden="true">
-      <div class="ribbon-knot"></div>
-      <div class="ribbon-tail ribbon-tail-left"></div>
-      <div class="ribbon-tail ribbon-tail-right"></div>
-    </div>
-
-    <div class="cover-hint">
-      <span>toque para abrir</span>
-    </div>
-  </div>
-
-  <!-- =========================================================
-       CONTEÚDO DO CONVITE
-  ========================================================== -->
-  <div class="invitation-content" id="invitationContent" aria-hidden="true">
-
-    <header class="hero">
-      <div class="hero-overlay"></div>
-
-      <!-- Coloque a foto dos noivos em img/noivos.jpg -->
-      <img
-        src="img/noivos.png"
-        alt="Foto dos noivos"
-        class="hero-photo"
-        id="heroPhoto"
-      />
-
-      <div class="photo-placeholder" id="photoPlaceholder">
-        <span>Adicione a foto dos noivos em<br><strong>img/noivos.jpg</strong></span>
-      </div>
-
-      <div class="hero-content">
-        <p class="eyebrow">Com alegria, convidamos você para celebrar</p>
-        <h1>Ana <span>&</span> Lucas</h1>
-        <p class="date">13 • 02 • 2027</p>
-        <a href="#convite" class="scroll-btn" aria-label="Ver convite">↓</a>
-      </div>
-    </header>
-
-    <main>
-      <section class="intro section reveal" id="convite">
-        <div class="ornament">✦</div>
-        <p class="small-title">Nosso grande dia</p>
-        <h2>Vamos nos casar!</h2>
-        <p class="intro-text">
-          Depois de tantos momentos, histórias e sonhos compartilhados,
-          chegou a hora de vivermos um dos capítulos mais especiais das nossas vidas.
-          E queremos você conosco para celebrar esse dia.
-        </p>
-      </section>
-
-      <section class="quote-section reveal">
-        <div class="quote-box">
-          <span class="quote-mark">“</span>
-          <blockquote>
-            O amor não consiste em olhar um para o outro,
-            mas em olhar juntos na mesma direção.
-          </blockquote>
-          <p>— Antoine de Saint-Exupéry</p>
-        </div>
-      </section>
-
-      <section class="details section reveal">
-        <p class="small-title">Reserve essa data</p>
-        <h2>13 de Fevereiro de 2027</h2>
-
-        <div class="details-grid">
-          <article class="detail-card">
-            <div class="detail-icon">♡</div>
-            <h3>Cerimônia</h3>
-            <p>16:30</p>
-            <span>Igreja Nossa Senhora das Graças</span>
-          </article>
-
-          <article class="detail-card">
-            <div class="detail-icon">⌂</div>
-            <h3>Recepção</h3>
-            <p>18:00</p>
-            <span>Espaço Jardim Imperial</span>
-          </article>
-
-          <article class="detail-card">
-            <div class="detail-icon">⌖</div>
-            <h3>Localização</h3>
-            <p>Iporá - GO</p>
-            <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer">
-              Ver no mapa
-            </a>
-          </article>
-        </div>
-      </section>
-
-      <section class="countdown-section reveal">
-        <p class="small-title light">Contagem regressiva</p>
-        <h2>Falta pouco para o nosso “sim”</h2>
-
-        <div class="countdown" id="countdown">
-          <div><strong id="days">00</strong><span>Dias</span></div>
-          <div><strong id="hours">00</strong><span>Horas</span></div>
-          <div><strong id="minutes">00</strong><span>Minutos</span></div>
-          <div><strong id="seconds">00</strong><span>Segundos</span></div>
-        </div>
-      </section>
-
-      <section class="dress-code section reveal">
-        <div class="ornament">✦</div>
-        <p class="small-title">Dress code</p>
-        <h2>Esporte fino</h2>
-        <p>
-          Queremos que você se sinta lindo(a), confortável e pronto(a)
-          para celebrar conosco até o final da noite.
-        </p>
-      </section>
-
-      <section class="rsvp section reveal">
-        <p class="small-title">Confirmação de presença</p>
-        <h2>Você vem celebrar conosco?</h2>
-        <p class="rsvp-text">
-          Sua presença tornará esse momento ainda mais especial.
-          Confirme até 30 de janeiro de 2027.
-        </p>
-
-        <form id="rsvpForm" class="rsvp-form">
-          <div class="field">
-            <label for="guestName">Seu nome</label>
-            <input type="text" id="guestName" placeholder="Digite seu nome" required />
-          </div>
-
-          <div class="field">
-            <label for="guests">Número de pessoas</label>
-            <select id="guests">
-              <option value="1">1 pessoa</option>
-              <option value="2">2 pessoas</option>
-              <option value="3">3 pessoas</option>
-              <option value="4">4 pessoas</option>
-            </select>
-          </div>
-
-          <button type="submit" class="primary-btn">
-            Confirmar pelo WhatsApp
-          </button>
-        </form>
-      </section>
-    </main>
-
-    <footer>
-      <div class="footer-monogram">A <span>&</span> L</div>
-      <p>13 • 02 • 2027</p>
-      <small>Feito com amor para um dia inesquecível.</small>
-    </footer>
-  </div>
-
-  <script src="script.js"></script>
-</body>
-</html>
+<main class="convite escondido" id="convite" aria-hidden="true">
+  <header class="cabecalho">
+    <span class="folha folha-a">❧</span><span class="folha folha-b">❧</span>
+    <p class="rotulo">COM A BÊNÇÃO DE DEUS</p>
+    <h1>O início da nossa<br><em>história</em></h1>
+    <p class="versiculo">“Acima de tudo, porém, revistam-se do amor,<br>que é o elo perfeito.”</p><small>COLOSSENSES 3:14</small>
+  </header>
+  <section class="foto-capa">
+    <img src="imagens/casal-01.jpeg" alt="Fotografia do casal">
+    <div class="sombra-foto"></div>
+  </section>
+  <section class="nomes">
+    <p>Com alegria, queremos compartilhar este dia com você</p>
+    <h2>I <span>&</span> L</h2><div class="linha"><i>✦</i></div>
+    <p class="mensagem">Diante das bênçãos de Deus, teremos a alegria de unir nossas vidas e convidar você para este momento.</p>
+  </section>
+  <section class="foto-memoria memoria-02" aria-label="Mais uma lembrança do casal">
+    <img src="imagens/casal-02.jpeg" alt="Uma lembrança especial do casal" loading="lazy">
+    <p>Dois caminhos, uma só história.</p>
+  </section>
+  <section class="data">
+    <p class="rotulo">VAMOS CELEBRAR O AMOR</p><strong>23</strong>
+    <h3>JANEIRO <i>•</i> 2027</h3><p>SÁBADO · ÀS 16H40</p>
+  </section>
+  <section class="foto-memoria memoria-03" aria-label="Uma lembrança do casal antes do grande dia">
+    <img src="imagens/casal-03.jpeg" alt="O casal compartilhando um momento feliz" loading="lazy">
+    <p>Que a vida nos reserve muitos capítulos assim.</p>
+  </section>
+  <section class="igreja">
+    <img src="imagens/igreja-pintura.png" alt="Igreja Matriz em pintura de aquarela com pinceladas incompletas">
+    <p class="rotulo">A CERIMÔNIA</p><h2>Igreja Matriz</h2>
+    <p>O primeiro capítulo de uma vida inteira juntos.</p>
+    <a class="botao" href="https://maps.app.goo.gl/zhHjWtMNak4a1wq88" target="_blank" rel="noopener">⌖ &nbsp; LOCALIZAÇÃO DA IGREJA MATRIZ <span>↗</span></a>
+  </section>
+  <section class="foto-memoria memoria-04" aria-label="Retrato especial da noiva">
+    <img src="imagens/casal-04.jpeg" alt="Retrato da noiva com seu buquê" loading="lazy">
+    <p>Um dia para guardar no coração.</p>
+  </section>
+  <section class="recepcao">
+    <div class="arte">❧ <span>celebrar</span> ❧</div><p class="rotulo">DEPOIS DA CERIMÔNIA</p>
+    <h2>Mix Clube</h2><p>Vamos brindar, sorrir e criar lembranças para sempre.</p>
+    <a class="botao" href="https://share.google/xN7SCmno8SfQMqcSk" target="_blank" rel="noopener">⌖ &nbsp; LOCALIZAÇÃO DA RECEPÇÃO <span>↗</span></a>
+  </section>
+  <section class="contagem">
+    <p class="rotulo">A CONTAGEM REGRESSIVA JÁ COMEÇOU</p><h2>Falta pouco para o nosso sim</h2>
+    <div class="relogio"><div><b id="dias">---</b><small>DIAS</small></div><i>:</i><div><b id="horas">--</b><small>HORAS</small></div><i>:</i><div><b id="minutos">--</b><small>MINUTOS</small></div><i>:</i><div><b id="segundos">--</b><small>SEGUNDOS</small></div></div>
+  </section>
+  <section class="foto-memoria memoria-05" aria-label="Uma última lembrança do casal">
+    <img src="imagens/casal-05.jpeg" alt="O casal de mãos dadas" loading="lazy">
+    <p>E queremos você perto para celebrar o nosso sim.</p>
+  </section>
+  <section class="confirmacao">
+    <p class="rotulo">SUA PRESENÇA É MUITO ESPECIAL</p><h2>Esperamos você!</h2>
+    <p>Confirme sua presença pelo WhatsApp.</p>
+    <a class="botao confirmar" href="https://wa.me/5564999628761?text=Ol%C3%A1%21%20Gostaria%20de%20confirmar%20minha%20presen%C3%A7a%20no%20casamento%20de%20I%20%26%20L%2C%20no%20dia%2023%20de%20janeiro%20de%202027." target="_blank" rel="noopener">♡ &nbsp; CONFIRMAR PRESENÇA PELO WHATSAPP</a>
+  </section>
+  <footer><span>❧</span><p>Com amor, hoje e sempre</p><strong>I <i>&</i> L</strong><small>23 · 01 · 2027</small></footer>
+  <button class="voltar" id="voltar">↶ Voltar à carta</button>
+</main>
+<script src="script.js"></script>
+</body></html>
