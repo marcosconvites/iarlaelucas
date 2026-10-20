@@ -8,16 +8,12 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="estilo.css">
     </head>
     <body>
-        <section class="abertura abertura-foto-tela abertura-envelope-imagem" id="abertura" aria-label="Envelope de casamento de Jarla e Lucas">
-            <img
-                class="imagem-envelope-tela"
-                src="imagens/envelope-jarla-lucas.png"
-                alt="Envelope verde ornamental com os nomes Jarla e Lucas e um lacre dourado"
-                fetchpriority="high"
-            >
+        <section class="abertura abertura-foto-tela" id="abertura" aria-label="Envelope fechado do convite de casamento">
+            <img class="imagem-envelope-tela" src="imagens/envelope-novo.png" alt="Envelope de casamento Jarla e Lucas com lacre dourado">
+            <div class="sombra-envelope-tela" aria-hidden="true"></div>
             <button
                 id="abrir"
                 class="zona-lacre-tela"
@@ -25,11 +21,12 @@
                 aria-label="Clique no lacre dourado para abrir o convite"
             ></button>
             <button
-                id="etiquetaSelo"
                 class="zona-etiqueta-tela"
+                id="etiquetaSelo"
                 type="button"
-                aria-label="Clique na etiqueta para abrir o convite"
+                aria-label="Clique no selo para abrir o convite"
             ></button>
+            <span class="aviso-toque-tela" aria-hidden="true">TOQUE NO LACRE PARA ABRIR</span>
         </section>
         <main class="convite escondido" id="convite" aria-hidden="true">
             <header class="cabecalho">
@@ -89,14 +86,6 @@
                     <span>↗</span>
                 </a>
             </section>
-            <section class="manual-convidado" aria-label="Manual do convidado">
-                <p class="rotulo">UM CARINHO PARA QUEM VAI CELEBRAR CONOSCO</p>
-                <h2>Manual do Convidado</h2>
-                <p class="texto-manual">Alguns lembretes para aproveitarmos esse dia tão especial juntos.</p>
-                <div class="moldura-manual">
-                    <img src="imagens/manual-convidado.jpg" alt="Manual do convidado com orientações para o casamento" loading="lazy">
-                </div>
-            </section>
             <section class="foto-memoria memoria-04" aria-label="Retrato especial da noiva">
                 <img src="imagens/casal-04.jpeg" alt="Retrato da noiva com seu buquê" loading="lazy">
                 <p>Um dia para guardar no coração.</p>
@@ -110,7 +99,7 @@
                 <p>Vamos brindar, sorrir e criar lembranças para sempre.</p>
                 <a
                     class="botao"
-                    href="https://maps.app.goo.gl/zGjjmmnAx71LaHD68?g_st=ic"
+                    href="https://share.google/xN7SCmno8SfQMqcSk"
                     target="_blank"
                     rel="noopener"
                 >⌖ &nbsp; LOCALIZAÇÃO DA RECEPÇÃO
